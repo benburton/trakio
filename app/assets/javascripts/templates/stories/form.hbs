@@ -1,0 +1,7 @@
+<form>
+  <fieldset>
+    <label {{bindAttr for='titleField.elementId'}}>Title</label>
+    {{ view Ember.TextField valueBinding='title' name='title' viewName='titleField' }}
+    <a href='#' {{action save}} class='btn btn-success'>Save</a>
+  </fieldset>
+</form>

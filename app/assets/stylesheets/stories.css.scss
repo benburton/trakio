@@ -35,33 +35,42 @@
       .action {
         height: 32px;
         width: 32px;
-        display: block;
-        border: 1px solid #cccccc;
-
-        @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
-
-        &:first-child {
-          border-radius: 4px 0 0 0;
-          &:last-child {
-            border-radius: 4px 0 0 4px;
-          }
-        }
-
-        &:last-child {
-          border-radius: 0 0 0 4px;
-        }
 
         &.add {
-          background: $white url('icons/stories/add.png') no-repeat 7px 7px;
-          &:hover {
-            background: #f2f2f2 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+          a {
+            background: $white url('icons/stories/add.png') no-repeat 7px 7px;
+
+            &:hover {
+              background: #f2f2f2 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+            }
+
+            &:active {
+              background: #e0e0e0 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+            }
           }
-          &:active {
-            background: #e0e0e0 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+        }
+
+        a {
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+          display: block;
+          border: 1px solid #cccccc;
+
+          @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
+
+          &:first-child {
+            border-radius: 4px 0 0 0;
+            &:last-child {
+              border-radius: 4px 0 0 4px;
+            }
+          }
+
+          &:last-child {
+            border-radius: 0 0 0 4px;
           }
         }
       }
     }
-
   }
 }

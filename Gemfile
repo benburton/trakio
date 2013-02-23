@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'rails-api'
-gem "active_model_serializers"
+
+# Rails "coming soon"
+gem 'strong_parameters'
+gem 'active_model_serializers'
 
 gem 'sqlite3'
 

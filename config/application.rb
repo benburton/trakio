@@ -61,6 +61,8 @@ module Trakio
 
     config.sass.line_comments = false
     config.sass.style = :nested
+
+    config.active_record.whitelist_attributes = false
   end
 end
 
