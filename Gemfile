@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'rails-api'
+gem "active_model_serializers"
 
 gem 'sqlite3'
 
@@ -21,4 +22,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker'
 end

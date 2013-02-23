@@ -59,6 +59,8 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
     haml (4.0.0)
       tilt
     handlebars (0.4.0)
@@ -162,10 +164,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   bourbon
   database_cleaner
   ember-rails
   factory_girl_rails
+  faker
   haml
   handlebars-rails
   handlebars_assets

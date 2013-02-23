@@ -12,6 +12,8 @@ Trakio::Application.routes.draw do
     end
   end
 
+  resources :stories, :except => :edit, :constraints => FormatTest.new(:json)
+
   get '*foo', :to => 'trakio#index', :constraints => FormatTest.new(:html)
   get '/', :to => 'trakio#index', :constraints => FormatTest.new(:html)
 
