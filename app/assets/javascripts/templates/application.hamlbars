@@ -1,0 +1,7 @@
+%header
+  .content
+    .logo
+      {{#linkTo 'index'}}trak.io{{/linkTo}}
+
+#content
+  {{outlet}}

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: $off-white;
+}
+
+$header-size: 60px;
+
+header {
+  background: $light-blue;
+  border-bottom: 10px solid $dark-blue;
+  min-height: $header-size;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .content {
+    @include outer-container;
+    .logo {
+      margin-top: 10px;
+      font-size: 30px;
+      @include span-columns(12);
+
+      a {
+        color: $off-white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#content {
+  @include outer-container;
+  margin-top: $header-size;
+}
