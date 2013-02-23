@@ -1,23 +1,25 @@
 * {
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: $sans-serif;
 }
 
 body {
-  background: $off-white;
+  background: $background-gray;
 }
 
 ul {
+  padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 $header-size: 60px;
 
-header {
-  background: $light-blue;
-  border-bottom: 10px solid $dark-blue;
+header.application {
+  background: $off-white;
+  border-bottom: 1px solid $dark-gray;
   min-height: $header-size;
+  @include box-shadow(1px 2px 4px 0 rgba(0,0,0,0.3));
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,7 +32,7 @@ header {
       @include span-columns(1);
 
       a {
-        color: $off-white;
+        color: $dark-gray;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
         text-decoration: none;
       }

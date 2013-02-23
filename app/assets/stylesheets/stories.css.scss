@@ -1,0 +1,27 @@
+.stories {
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  margin: 50px 0;
+  font-family: $sans-serif;
+
+  header {
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #b5b5b5;
+    color: $stories-header;
+    background: $stories-header-bg;
+    text-shadow: $white 0px 1px 0px;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  ul {
+    border-radius: 4px;
+    .story {
+      padding: 7px 10px;
+      background: $off-white;
+      border-bottom: 1px solid #b5b5b5;
+    }
+  }
+}

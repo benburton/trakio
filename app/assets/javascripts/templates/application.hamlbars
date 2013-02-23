@@ -1,4 +1,4 @@
-%header
+%header.application
   .content
     .logo
       {{#linkTo 'index'}}trak.io{{/linkTo}}
