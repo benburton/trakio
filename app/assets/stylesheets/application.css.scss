@@ -7,6 +7,11 @@ body {
   background: $off-white;
 }
 
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
 $header-size: 60px;
 
 header {
@@ -22,7 +27,7 @@ header {
     .logo {
       margin-top: 10px;
       font-size: 30px;
-      @include span-columns(12);
+      @include span-columns(1);
 
       a {
         color: $off-white;
@@ -30,7 +35,30 @@ header {
         text-decoration: none;
       }
     }
+
+    nav {
+      @include span-columns(10);
+      float: right;
+      height: 50px;
+      ul {
+        height: 100%;
+        li {
+          float: right;
+          display: inline-block;
+          height: 100%;
+          a {
+            display: inline-block;
+            background: lighten($light-blue, 4%);
+            color: $off-white;
+            height: 100%;
+            padding: 25px 15px 0 15px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
+
 }
 
 #content {

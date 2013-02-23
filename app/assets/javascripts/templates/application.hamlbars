@@ -3,5 +3,10 @@
     .logo
       {{#linkTo 'index'}}trak.io{{/linkTo}}
 
+    %nav
+      %ul
+        %li
+          {{#linkTo 'stories'}}stories{{/linkTo}}
+
 #content
   {{outlet}}
