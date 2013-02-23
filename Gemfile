@@ -13,6 +13,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'handlebars-rails'
   gem 'handlebars_assets'
+  gem 'hamlbars'
   gem 'ember-rails'
   gem 'sass-rails'
   gem 'haml'

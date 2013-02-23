@@ -1,0 +1,11 @@
+%section.stories
+  %nav.actions
+    %ul
+      %li.action.add
+        {{#linkTo 'stories.new'}}{{/linkTo}}
+  %header Stories
+  %ul
+    {{#each controller}}
+    %li.story
+      {{title}}
+    {{/each}}
