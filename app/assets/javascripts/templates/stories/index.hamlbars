@@ -2,7 +2,10 @@
   %nav.actions
     %ul
       %li.action.add
-        {{#linkTo 'stories.new'}}{{/linkTo}}
+        {{#view Trakio.StoriesNewButtonView }}
+        %a{href:"#"}
+        {{/view}}
+        {{view Trakio.StoriesNewView contentBinding="this"}}
   %header Stories
   %ul
     {{#each story in controller}}
