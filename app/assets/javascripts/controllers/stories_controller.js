@@ -1,7 +1,9 @@
 Trakio.StoriesIndexController = Ember.ArrayController.extend({
 
   add: function(storyParams) {
-    Trakio.Story.createRecord(storyParams);
+    console.log(storyParams);
+    var story = Trakio.Story.createRecord(storyParams);
+    console.log(story);
     this.store.commit();
   },
 

@@ -1,8 +1,16 @@
 <form id="new-story">
   <fieldset>
     <legend>Create Story</legend>
-    <label {{bindAttr for='titleField.elementId'}}>Title</label>
-    {{ view Ember.TextField valueBinding='controller.title' name='title' viewName='titleField' }}
+
+    <div class="field-pair">
+      <label {{bindAttr for='titleField.elementId'}}>Title</label>
+      {{ view Ember.TextField valueBinding='controller.title' name='title' viewName='titleField' }}
+    </div>
+
+    <div class="field-pair description">
+      <label {{bindAttr for='descriptionField.elementId'}}>Description</label>
+      {{ view Ember.TextArea valueBinding='controller.description' name='decription' viewName='descriptionField' }}
+    </div>
 
     <div class="buttons">
       <input type="submit" value="create" />
