@@ -73,4 +73,46 @@
       }
     }
   }
+
+  .story {
+    $background: $white;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      background: $background;
+      .details {
+        position: absolute;
+        display: block;
+        height: 40px;
+        z-index: 1;
+        left: 0;
+        padding: 0 10px;
+      }
+    }
+
+    .details {
+      background: $background;
+      padding: 0;
+      display: none;
+      cursor: default;
+      height: 0;
+      overflow: hidden;
+
+      p {
+        display: block;
+        font-size: 14px;
+        color: $medium-gray;
+      }
+
+      &.expanded {
+        height: inherit;
+        display: block;
+        overflow: auto;
+        position: relative;
+        top: auto;
+        padding: 0 !important;
+      }
+    }
+  }
+
 }

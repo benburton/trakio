@@ -9,3 +9,17 @@ Trakio.StoriesNewController = Ember.ObjectController.extend({
   }
 
 });
+
+Trakio.StoriesIndexController = Ember.ArrayController.extend({
+
+  expand: function(el) {
+    var $details = $('.details', el);
+    $details.addClass('expanded');
+  },
+
+  contract: function(el) {
+    var $details = $('.details', el);
+    $details.removeClass('expanded');
+  }
+
+});

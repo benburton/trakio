@@ -5,7 +5,11 @@
         {{#linkTo 'stories.new'}}{{/linkTo}}
   %header Stories
   %ul
-    {{#each controller}}
+    {{#each story in controller}}
+    {{#view Trakio.StoryLineItemView valueBinding="story"}}
     %li.story
-      {{title}}
+      {{story.title}}
+      .details
+        %p {{story.description}}
+    {{/view}}
     {{/each}}
