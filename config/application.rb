@@ -63,6 +63,7 @@ module Trakio
     config.sass.style = :nested
 
     config.active_record.whitelist_attributes = false
+
   end
 end
 

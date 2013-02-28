@@ -13,4 +13,6 @@
 //= require_tree ./views
 
 
-Trakio = Ember.Application.create()
+Trakio = Ember.Application.create({
+  authentication_token: undefined
+});

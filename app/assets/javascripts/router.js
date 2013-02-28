@@ -3,4 +3,5 @@ Trakio.Router.map(function() {
     this.route('index');
     this.route('new');
   });
+  this.route('login');
 });

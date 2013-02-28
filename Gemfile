@@ -8,6 +8,7 @@ gem 'strong_parameters'
 gem 'active_model_serializers'
 
 gem 'sqlite3'
+gem 'devise'
 
 group :assets do
   gem 'jquery-rails'

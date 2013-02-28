@@ -1,0 +1,9 @@
+{{#view Trakio.LoginView }}
+%form
+  <label {{bindAttr for='emailField.elementId'}}>Email</label>
+  {{ view Ember.TextField valueBinding='controller.email' name='title' viewName='emailField' }}
+
+  <label {{bindAttr for='passwordField.elementId'}}>Password</label>
+  {{ view Ember.TextField valueBinding='controller.password' name='title' viewName='passwordField' type='password' }}
+  %input{type: 'submit'}
+{{/view}}
