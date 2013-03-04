@@ -8,5 +8,6 @@
         %li
           {{#linkTo 'stories'}}{{ t header.stories }}{{/linkTo}}
 
+
 #content
   {{outlet}}

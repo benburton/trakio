@@ -32,3 +32,9 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+def has_attributes(*attributes)
+  attributes.each do |attribute|
+    described_class._attributes.keys.should include attribute
+  end
+end
