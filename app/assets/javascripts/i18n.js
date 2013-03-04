@@ -15,7 +15,8 @@ Em.I18n.translations = {
   'registration.sign_in_link': 'Already have an account? Sign in.',
 
   // Header
-  'header.stories': 'stories',
+  'header.stories': 'Stories',
+  'header.logout': 'Log out',
 
   // Stories
   // - Index

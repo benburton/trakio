@@ -4,6 +4,7 @@ class ApplicationController < ActionController::API
   before_filter :authorize_token
 
   def current_user
+    return nil if params[:auth].blank?
     @user ||= User.find_by_authentication_token(params[:auth])
     @user
   end

@@ -1,6 +1,6 @@
 class AuthTokenController < ApplicationController
 
-  skip_before_filter :authorize_token, only: [:create]
+  skip_before_filter :authorize_token, only: [:login]
 
   def login
     params

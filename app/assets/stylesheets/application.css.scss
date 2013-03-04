@@ -50,6 +50,7 @@ header.application {
           display: inline-block;
           height: 100%;
           a {
+            text-transform: lowercase;
             display: inline-block;
             background: lighten($light-blue, 4%);
             color: $off-white;
