@@ -1,0 +1,52 @@
+.login-container, .register-container {
+  @include outer-container;
+
+  .login, .register {
+    @include span-columns(6);
+    @include shift(3);
+
+    @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
+    background: $off-white;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+
+    h2 {
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+    }
+
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input[type=password], input[type=email] {
+      margin-bottom: 15px;
+      width: 100%;
+      display: block;
+    }
+
+    input[type=submit] {
+      float: left;
+    }
+
+    a {
+      margin-top: 4px;
+      float: right;
+      color: $dark-gray;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}

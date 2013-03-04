@@ -1,0 +1,25 @@
+.register-container
+
+  {{#view Trakio.RegistrationView }}
+
+  %form.register
+    %h2 Sign Up
+    %p Sign up for trak.io now to get started organizing your software project.
+
+    {{#if errorMessage}}
+    %p.error {{errorMessage}}
+    {{/if}}
+
+    <label {{bindAttr for='emailField.elementId'}}>Email</label>
+    {{ view Ember.TextField valueBinding='controller.email' name='title' viewName='emailField' type='email' }}
+
+    <label {{bindAttr for='passwordField.elementId'}}>Password</label>
+    {{ view Ember.TextField valueBinding='controller.password' name='password' viewName='passwordField' type='password' }}
+
+    <label {{bindAttr for='passwordConfirmationField.elementId'}}>Confirm Password</label>
+    {{ view Ember.TextField valueBinding='controller.passwordConfirmation' name='passwordConfirmation' viewName='passwordConfirmationField' type='password' }}
+
+    %input{type: 'submit'}
+    {{#linkTo 'login'}}Already have an account? Sign in.{{/linkTo}}
+
+  {{/view}}

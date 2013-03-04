@@ -4,4 +4,5 @@ Trakio.Router.map(function() {
     this.route('new');
   });
   this.route('login');
+  this.route('registration', { path: '/register'});
 });

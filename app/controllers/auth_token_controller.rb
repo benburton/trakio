@@ -2,7 +2,8 @@ class AuthTokenController < ApplicationController
 
   skip_before_filter :authorize_token, only: [:create]
 
-  def create
+  def login
+    params
     if user = User.find_for_database_authentication(email: user_params[:email])
       render json: user
     else

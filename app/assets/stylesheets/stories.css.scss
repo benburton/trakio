@@ -58,7 +58,6 @@
           cursor: pointer;
           display: block;
           border: 1px solid #cccccc;
-
           @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
 
           &:first-child {

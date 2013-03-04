@@ -1,9 +1,10 @@
 //= require jquery
+//= require jquery.cookie
 //= require handlebars
 //= require ember
 //= require ember-data
 //= require_self
-//= require router
+//= require routes
 //= require store
 //= require_tree ./routes
 //= require_tree ./helpers
@@ -14,5 +15,5 @@
 
 
 Trakio = Ember.Application.create({
-  authentication_token: undefined
+  authentication_token: $.cookie('authentication_token')
 });

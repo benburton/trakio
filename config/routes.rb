@@ -14,8 +14,10 @@ Trakio::Application.routes.draw do
 
   resources :stories, :except => :edit, :constraints => FormatTest.new(:json)
 
+  match '/auth', to: 'auth_token#login', :via => :post
+  match '/register', to: 'registration#create', :via => :post
+
   get '*foo', to: 'trakio#index', constraints: FormatTest.new(:html)
   get '/', to: 'trakio#index', constraints: FormatTest.new(:html)
-  match '/auth', to: 'auth_token#create', :via => :post
 
 end

@@ -12,6 +12,7 @@ gem 'devise'
 
 group :assets do
   gem 'jquery-rails'
+  gem 'jquery-cookie-rails'
   gem 'handlebars-rails'
   gem 'handlebars_assets'
   gem 'hamlbars'
@@ -19,6 +20,7 @@ group :assets do
   gem 'sass-rails'
   gem 'haml'
   gem 'bourbon'
+  gem 'coffee-rails'
   gem 'neat'
 end
 

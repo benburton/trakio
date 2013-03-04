@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include ActionController::MimeResponds
 
   before_filter :authorize_token
 
