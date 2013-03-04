@@ -4,21 +4,20 @@
 
   %form.login
 
-    %h2 Log in
-
-    %p Enter your email address and password to log in to trak.io. If you've lost your password, too bad. We don't have recovery features yet.
+    %h2 {{ t login.header }}
+    %p {{ t login.description }}
 
     {{#if errorMessage}}
     %p.error {{errorMessage}}
     {{/if}}
 
-    <label {{bindAttr for='emailField.elementId'}}>Email</label>
+    <label {{bindAttr for='emailField.elementId'}}>{{ t login.email_label }}</label>
     {{ view Ember.TextField valueBinding='controller.email' name='title' viewName='emailField' type='email' }}
 
-    <label {{bindAttr for='passwordField.elementId'}}>Password</label>
+    <label {{bindAttr for='passwordField.elementId'}}>{{ t login.password_label }}</label>
     {{ view Ember.TextField valueBinding='controller.password' name='title' viewName='passwordField' type='password' }}
 
-    %input{type: 'submit'}
-    {{#linkTo 'registration'}}No account yet? Sign up.{{/linkTo}}
+    %input{type: 'submit', value: 'Log In'}
+    {{#linkTo 'registration'}}{{ t login.register_link }}{{/linkTo}}
 
   {{/view}}

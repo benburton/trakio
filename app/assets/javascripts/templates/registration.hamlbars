@@ -3,23 +3,23 @@
   {{#view Trakio.RegistrationView }}
 
   %form.register
-    %h2 Sign Up
-    %p Sign up for trak.io now to get started organizing your software project.
+    %h2 {{ t registration.header }}
+    %p {{ t registration.description }}
 
     {{#if errorMessage}}
     %p.error {{errorMessage}}
     {{/if}}
 
-    <label {{bindAttr for='emailField.elementId'}}>Email</label>
+    <label {{bindAttr for='emailField.elementId'}}>{{ t registration.email_label }}</label>
     {{ view Ember.TextField valueBinding='controller.email' name='title' viewName='emailField' type='email' }}
 
-    <label {{bindAttr for='passwordField.elementId'}}>Password</label>
+    <label {{bindAttr for='passwordField.elementId'}}>{{ t registration.password_label }}</label>
     {{ view Ember.TextField valueBinding='controller.password' name='password' viewName='passwordField' type='password' }}
 
-    <label {{bindAttr for='passwordConfirmationField.elementId'}}>Confirm Password</label>
+    <label {{bindAttr for='passwordConfirmationField.elementId'}}>{{ t registration.password_confirmation_label }}</label>
     {{ view Ember.TextField valueBinding='controller.passwordConfirmation' name='passwordConfirmation' viewName='passwordConfirmationField' type='password' }}
 
     %input{type: 'submit'}
-    {{#linkTo 'login'}}Already have an account? Sign in.{{/linkTo}}
+    {{#linkTo 'login'}}{{ t registration.sign_in_link }}{{/linkTo}}
 
   {{/view}}

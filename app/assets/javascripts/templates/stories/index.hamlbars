@@ -6,7 +6,7 @@
         %a{href:"#"}
         {{/view}}
         {{view Trakio.StoriesNewView contentBinding="this"}}
-  %header Stories
+  %header {{ t stories.index.list.header }}
   %ul
     {{#each story in controller}}
     {{#view Trakio.StoryLineItemView valueBinding="story"}}

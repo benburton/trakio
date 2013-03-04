@@ -1,20 +1,20 @@
 <form id="new-story">
   <fieldset>
-    <legend>Create Story</legend>
+    <legend>{{ t stories.form.header }}</legend>
 
     <div class="field-pair">
-      <label {{bindAttr for='titleField.elementId'}}>Title</label>
+      <label {{bindAttr for='titleField.elementId'}}>{{ t stories.form.title_label }}</label>
       {{ view Ember.TextField valueBinding='controller.title' name='title' viewName='titleField' }}
     </div>
 
     <div class="field-pair description">
-      <label {{bindAttr for='descriptionField.elementId'}}>Description</label>
+      <label {{bindAttr for='descriptionField.elementId'}}>{{ t stories.form.description_label }}</label>
       {{ view Ember.TextArea valueBinding='controller.description' name='decription' viewName='descriptionField' }}
     </div>
 
     <div class="buttons">
       <input type="submit" value="create" />
-      {{#view Trakio.StoriesNewCancelButtonView }}<button type="button">cancel</button>{{/view}}
+      {{#view Trakio.StoriesNewCancelButtonView }}<button type="button">{{ t stories.form.cancel_button }}</button>{{/view}}
     </div>
   </fieldset>
 </form>
