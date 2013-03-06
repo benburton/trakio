@@ -1,4 +1,5 @@
 Em.I18n.translations = {
+
   // Login
   'login.header': 'Log In',
   'login.description': "Enter your email address and password to log in to trak.io. If you've lost your password, too bad. We don't have recovery features yet.",
@@ -15,9 +16,11 @@ Em.I18n.translations = {
   'registration.sign_in_link': 'Already have an account? Sign in.',
 
   // Header
-  'header.login': 'Log In',
-  'header.stories': 'Stories',
+  // - Logged In
+  'header.projects': 'Projects',
   'header.logout': 'Log out',
+  // - Logged Out
+  'header.login': 'Log In',
 
   // Stories
   // - Index
@@ -27,5 +30,10 @@ Em.I18n.translations = {
   'stories.form.title_label': 'Title',
   'stories.form.description_label': 'Description',
   'stories.form.create_button': 'create',
-  'stories.form.cancel_button': 'cancel'
+  'stories.form.cancel_button': 'cancel',
+
+  //Projects
+  // - Index
+  'projects.index.zero': 'You have no projects!'
+
 };

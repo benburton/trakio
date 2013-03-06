@@ -1,0 +1,7 @@
+%p Welcome!
+
+{{#each project in controller}}
+{{#linkTo 'project' project }}{{project.name}}{{/linkTo}}
+{{else}}
+.zero {{ t projects.index.zero }}
+{{/each}}

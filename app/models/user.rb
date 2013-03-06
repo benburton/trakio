@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 
   after_save :ensure_authentication_token!
 
+  has_many :projects
+
 end

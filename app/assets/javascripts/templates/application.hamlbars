@@ -7,7 +7,7 @@
       %ul
         {{#view Trakio.HeaderView isVisibleBinding="isLoggedIn" }}
         %li
-          {{#linkTo 'stories'}}{{ t header.stories }}{{/linkTo}}
+          {{#linkTo 'dashboard'}}{{ t header.projects }}{{/linkTo}}
         %li
           {{#linkTo 'logout'}}{{ t header.logout }}{{/linkTo}}
         {{/view}}
