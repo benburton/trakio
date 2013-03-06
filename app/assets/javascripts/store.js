@@ -28,10 +28,10 @@ Trakio.Store = DS.Store.extend({
     },
 
     ajax: function(url, type, hash) {
-      var token;
-      if (Trakio.authentication_token) {
+      var token = Trakio.get('authentication_token');
+      if (token) {
         hash.data || (hash.data = {});
-        hash.data['auth'] = Trakio.authentication_token;
+        hash.data['auth'] = token;
       }
       hash.context = this;
       return this.oldAjax(url, type, hash);

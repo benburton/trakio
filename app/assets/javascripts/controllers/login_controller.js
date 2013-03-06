@@ -13,7 +13,7 @@ Trakio.LoginController = Ember.Controller.extend({
       },
       success: function(data) {
         $.cookie('authentication_token', data.user.authentication_token);
-        Trakio.authentication_token = data.user.authentication_token;
+        Trakio.set('authentication_token', data.user.authentication_token);
         self.get('target').transitionTo('stories');
       },
       error: function(data) {
