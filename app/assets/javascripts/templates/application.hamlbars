@@ -5,9 +5,15 @@
 
     %nav
       %ul
+        {{#view Trakio.HeaderView isVisibleBinding="isLoggedIn" }}
         %li
           {{#linkTo 'stories'}}{{ t header.stories }}{{/linkTo}}
+        %li
           {{#linkTo 'logout'}}{{ t header.logout }}{{/linkTo}}
-
+        {{/view}}
+        {{#view Trakio.HeaderView isVisibleBinding="isNotLoggedIn"}}
+        %li
+          {{#linkTo 'login'}}{{ t header.login }}{{/linkTo}}
+        {{/view}}
 #content
   {{outlet}}
