@@ -1,0 +1,30 @@
+<h2>{{name}}</h2>
+
+<section class="stories">
+  <nav class="actions">
+    <ul>
+      <li class="action add">
+        {{#view Trakio.StoriesNewButtonView }}
+          <a href="#"></a>
+        {{/view}}
+        {{view Trakio.StoriesNewView contentBinding="this"}}
+      <li>
+    </ul>
+  </nav>
+  <header>{{ t stories.index.list.header }}</header>
+  <ul>
+    {{#each stories}}
+
+      {{#view Trakio.StoryLineItemView valueBinding="story"}}
+        <li class="story">
+          {{title}}
+          <div class="details">
+            <p>{{description}}</p>
+          </div>
+        </li>
+      {{/view}}
+    {{else}}
+      <li class="zero">{{ t stories.index.zero-state }}</li>
+    {{/each}}
+  </ul>
+</section>

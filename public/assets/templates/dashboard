@@ -1,15 +1,16 @@
-%h2 Projects
-
-%ul.projects
+<h2>Projects</h2>
+<ul class='projects'>
   {{#each project in controller}}
-  %li
+  <li>
     {{#linkTo 'project' project class="project" }}{{project.name}}{{/linkTo}}
+  </li>
   {{else}}
-  %li.zero {{ t projects.index.zero }}
+  <li class='zero'>{{ t projects.index.zero }}</li>
   {{/each}}
-
+</ul>
 {{#view Trakio.CreateProjectButtonView }}
-%a.button.create{href: "#"}
+<a class='button create' href='#'>
   {{ t projects.create_button }}
+</a>
 {{/view}}
 {{view Trakio.ProjectNewView contentBinding="this"}}

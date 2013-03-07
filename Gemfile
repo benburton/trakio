@@ -7,21 +7,21 @@ gem 'rails-api'
 gem 'strong_parameters'
 gem 'active_model_serializers'
 
-gem 'sqlite3'
 gem 'devise'
+gem 'sass-rails'
+# gem 'handlebars_assets'
+gem 'jquery-rails'
+gem 'jquery-cookie-rails'
+gem 'handlebars-rails'
+gem 'hamlbars'
+gem 'haml'
+gem 'bourbon'
+gem 'coffee-rails'
+gem 'neat'
+gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
 
 group :assets do
-  gem 'jquery-rails'
-  gem 'jquery-cookie-rails'
-  gem 'handlebars-rails'
-  gem 'handlebars_assets'
-  gem 'hamlbars'
-  gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
-  gem 'sass-rails'
-  gem 'haml'
-  gem 'bourbon'
-  gem 'coffee-rails'
-  gem 'neat'
+  gem 'uglifier'
 end
 
 group :test do
@@ -30,4 +30,12 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+end
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :staging, :production do
+  gem 'pg'
 end
