@@ -22,7 +22,7 @@ Trakio::Application.configure do
 
   config.handlebars.precompile = true
 
-  config.ember.variant = :production
+  #config.ember.variant = :production
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

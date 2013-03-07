@@ -85,11 +85,6 @@ GEM
       i18n (~> 0.5)
     haml (4.0.0)
       tilt
-    hamlbars (2.0.0)
-      execjs (>= 1.2)
-      haml
-      sprockets
-      tilt
     handlebars (0.4.0)
       commonjs (~> 0.2.3)
       therubyracer (~> 0.11.1)
@@ -211,7 +206,6 @@ DEPENDENCIES
   factory_girl_rails
   faker
   haml
-  hamlbars
   handlebars-rails
   jquery-cookie-rails
   jquery-rails
