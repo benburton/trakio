@@ -25,6 +25,7 @@ Em.I18n.translations = {
   // Stories
   // - Index
   'stories.index.list.header': 'Stories',
+  'stories.index.zero_state': 'You have no stories! Click the + to the left to create one.',
   // - Form
   'stories.form.header': 'Create Story',
   'stories.form.title_label': 'Title',
@@ -34,6 +35,9 @@ Em.I18n.translations = {
 
   //Projects
   // - Index
-  'projects.index.zero': 'You have no projects!'
+  'projects.create_button': 'create project',
+  'projects.index.zero': "You have no projects! Click the 'create project' button below to get started.",
+  // - Form
+  'projects.form.name_label': 'Project Name'
 
 };

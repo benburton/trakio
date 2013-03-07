@@ -52,7 +52,7 @@ header.application {
           a {
             text-transform: lowercase;
             display: inline-block;
-            background: lighten($light-blue, 4%);
+            background: $medium-gray;
             color: $off-white;
             height: 100%;
             padding: 25px 15px 16px 15px;
@@ -68,4 +68,9 @@ header.application {
 #content {
   @include outer-container;
   margin-top: $header-size;
+}
+
+@mixin shadow-box {
+  border-radius: 4px;
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
 }

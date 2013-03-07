@@ -1,7 +1,15 @@
-%p Welcome!
+%h2 Projects
 
-{{#each project in controller}}
-{{#linkTo 'project' project }}{{project.name}}{{/linkTo}}
-{{else}}
-.zero {{ t projects.index.zero }}
-{{/each}}
+%ul.projects
+  {{#each project in controller}}
+  %li
+    {{#linkTo 'project' project class="project" }}{{project.name}}{{/linkTo}}
+  {{else}}
+  %li.zero {{ t projects.index.zero }}
+  {{/each}}
+
+{{#view Trakio.CreateProjectButtonView }}
+%a.button.create{href: "#"}
+  {{ t projects.create_button }}
+{{/view}}
+{{view Trakio.ProjectNewView contentBinding="this"}}

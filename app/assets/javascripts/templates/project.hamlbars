@@ -1,1 +1,24 @@
 %h2 {{name}}
+
+%section.stories
+  %nav.actions
+    %ul
+      %li.action.add
+        {{#view Trakio.StoriesNewButtonView }}
+        %a{href:"#"}
+        {{/view}}
+        {{view Trakio.StoriesNewView contentBinding="this"}}
+  %header {{ t stories.index.list.header }}
+  %ul
+    {{#each stories}}
+    {{#view Trakio.StoryLineItemView valueBinding="story"}}
+    %li.story
+      {{title}}
+      .details
+        %p {{description}}
+    {{/view}}
+    {{else}}
+    %li.zero
+      {{ t stories.index.zero_state }}
+    {{/each}}
+

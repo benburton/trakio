@@ -16,7 +16,7 @@ group :assets do
   gem 'handlebars-rails'
   gem 'handlebars_assets'
   gem 'hamlbars'
-  gem 'ember-rails'
+  gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
   gem 'sass-rails'
   gem 'haml'
   gem 'bourbon'

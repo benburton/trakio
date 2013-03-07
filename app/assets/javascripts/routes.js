@@ -1,8 +1,5 @@
 Trakio.Router.map(function() {
   this.route('dashboard');
-  this.resource('stories', function() {
-    this.route('index');
-  });
   this.resource('projects', function() {
     this.resource('project', { path: ':project_id' });
   });

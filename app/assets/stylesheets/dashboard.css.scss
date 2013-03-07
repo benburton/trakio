@@ -1,0 +1,62 @@
+.projects {
+  li {
+    .project {
+      @include shadow-box;
+
+      font-weight: bold;
+      text-decoration: none;
+      padding: 15px;
+      margin: 15px 0;
+      background: $off-white;
+      display: block;
+      width: 300px;
+      color: $black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.zero {
+      color: $dark-gray;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+  }
+}
+
+#new_project {
+  display: none;
+  position: absolute;
+  opacity: 0;
+
+  fieldset {
+    @include shadow-box;
+    min-width: 500px;
+    border: none;
+    padding: 20px;
+    background: $off-white;
+
+    h2 {
+      margin: 0 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type=text] {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    margin-top: 15px;
+    float: right;
+    .ember-view, input[type=submit] {
+      display: inline;
+      margin-left: 10px;
+    }
+  }
+}

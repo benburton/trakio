@@ -3,24 +3,11 @@ require 'spec_helper'
 describe StoriesController do
 
   let(:user) { create(:user) }
-
-  let!(:stories) {
-    2.times.each { create(:story) }
-    Story.all
-  }
-
-  describe 'GET index' do
-    subject { get :index, :format => :json, auth: user.authentication_token }
-    it { should be_success }
-    it 'returns all stories as json' do
-      pending 'Need to figure out active_model_serializer'
-      subject
-    end
-  end
+  let(:project) { create(:project) }
 
   describe 'POST create' do
     let(:title) { Faker::Lorem.words(4).join(' ') }
-    subject { post :create, story: {title: title}, auth: user.authentication_token }
+    subject { authed_post :create, story: {title: title, project_id: project.id} }
 
     it 'should return OK' do
       subject

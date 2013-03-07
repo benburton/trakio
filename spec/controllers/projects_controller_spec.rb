@@ -35,5 +35,17 @@ describe ProjectsController do
 
   end
 
+  describe "POST create" do
+    subject { authed_post :create, project: { name: name } }
+    let(:name) { Faker::Lorem.words(5).join(' ') }
+
+    it { should be_success }
+
+    it "should create a new project" do
+      expect { subject }.to change { Project.where(user_id: user.id).count }.by(1)
+    end
+
+  end
+
 
 end

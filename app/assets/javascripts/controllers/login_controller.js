@@ -14,7 +14,7 @@ Trakio.LoginController = Ember.Controller.extend({
       success: function(data) {
         $.cookie('authentication_token', data.user.authentication_token);
         Trakio.set('authentication_token', data.user.authentication_token);
-        self.get('target').transitionTo('stories');
+        self.get('target').transitionTo('dashboard');
       },
       error: function(data) {
         var response = JSON.parse(data.responseText);

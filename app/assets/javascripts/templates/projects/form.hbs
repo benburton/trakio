@@ -1,0 +1,15 @@
+<form id="new_project">
+  <fieldset>
+    <h2>Create Project</h2>
+
+    <div class="field-pair">
+      <label {{bindAttr for='nameField.elementId'}}>{{ t projects.form.name_label }}</label>
+      {{ view Ember.TextField valueBinding='controller.name' name='name' viewName='nameField' }}
+    </div>
+
+    <div class="buttons">
+      <input class="button confirm" type="submit" value="create" />
+      {{#view Trakio.ProjectNewCancelButtonView }}<button type="button" class="button deny">{{ t stories.form.cancel_button }}</button>{{/view}}
+    </div>
+  </fieldset>
+</form>

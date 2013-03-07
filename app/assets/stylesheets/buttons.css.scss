@@ -1,0 +1,30 @@
+.button {
+
+  @mixin for-color($color) {
+    background: $color;
+    &:hover {
+      background: lighten($color, 4);
+    }
+  }
+
+  @include for-color($light-blue);
+  border: none;
+  color: $white;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 4px;
+
+  &.create {
+    margin-top: 10px;
+  }
+
+  &.confirm {
+
+  }
+
+  &.deny {
+    @include for-color($light-red);
+  }
+
+}

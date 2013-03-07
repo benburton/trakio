@@ -5,11 +5,14 @@ $(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
   }
 });
 
-DS.RESTAdapter.configure("plurals", { story: 'stories' });
+
+Trakio.Adapter = DS.RESTAdapter.extend()
+
+Trakio.Adapter.configure("plurals", { story: 'stories' });
 
 Trakio.Store = DS.Store.extend({
   revision: 11,
-  adapter: DS.RESTAdapter.extend({
+  adapter: Trakio.Adapter.extend({
     bulkCommit: false,
 
     // TODO: Remove me when Ember gets sane token management

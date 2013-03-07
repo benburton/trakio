@@ -57,9 +57,10 @@
       var loading = document.createElement('div');
       loading.id = 'loading';
       $(event.target).append(loading);
-      this.get('controller').add({
+      this.get('controller').addStory({
         title: this.get('titleField').get('value'),
-        description: this.get('descriptionField').get('value')
+        description: this.get('descriptionField').get('value'),
+        project: this.get('content')
       });
       hideForm();
       return false;
