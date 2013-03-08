@@ -11,6 +11,7 @@
 //= require routes
 //= require store
 //= require util
+//= require enums
 //= require_tree ./routes
 //= require_tree ./helpers
 //= require_tree ./controllers

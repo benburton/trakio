@@ -1,3 +1,5 @@
+var ben;
+
 Trakio.ProjectController = Ember.ObjectController.extend({
 
   addStory: function(storyParams) {
@@ -12,6 +14,10 @@ Trakio.ProjectController = Ember.ObjectController.extend({
       email: email
     });
     this.get('model').get('project_memberships').pushObject(membership);
+    this.store.commit();
+  },
+
+  commit: function() {
     this.store.commit();
   },
 

@@ -5,7 +5,7 @@ describe UsersController do
   let(:user) { create(:user) }
 
   describe 'GET show' do
-    subject { authed_get :show }
+    subject { authed_get :show, id: 'me' }
 
     it { should be_success }
 

@@ -182,17 +182,22 @@
       }
 
       .details-properties {
-        .property-key {
-          margin: 0;
-          font-weight: bold;
-          display: inline-block;
-          &:after {
-            content: ":";
-          }
-        }
 
-        .property-value {
-          display: inline-block;
+        .details-property {
+
+          .property-key {
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+            &:after {
+              content: ":";
+            }
+          }
+
+          .property-value {
+            margin: 0;
+            display: inline-block;
+          }
         }
       }
 

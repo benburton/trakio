@@ -13,7 +13,7 @@ Trakio::Application.routes.draw do
   end
 
   resources :projects, constraints: FormatTest.new(:json)
-  resources :stories, :only => :create, constraints: FormatTest.new(:json)
+  resources :stories, only: [:create, :update], constraints: FormatTest.new(:json)
   resources :project_memberships, :only => :create, constraints: FormatTest.new(:json)
   resources :users, only: [:show, :update], constraints: FormatTest.new(:json)
 

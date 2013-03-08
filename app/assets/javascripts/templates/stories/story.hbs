@@ -1,10 +1,22 @@
 <li class="story">
   {{title}}
   <div class="details">
+
     <p>{{description}}</p>
+
     <dl class="details-properties">
-      <dd class="property-key">Reported By</dd>
-      <dt class="property-value">{{reporter.displayName}}</dt>
+      {{#if reporter}}
+        <div class="details-property">
+          <dt class="property-key">Reported By</dt>
+          <dd class="property-value">{{reporter.displayName}}</dd>
+        </div>
+      {{/if}}
+      <div class="details-property">
+        <dt class="property-key">Story Type</dt>
+        <dd class="property-value">
+          {{ view Ember.Select valueBinding="storyType" contentBinding="Trakio.Enums.issueTypes" }}
+        </dd>
+      </div>
     </dl>
   </div>
 </li>

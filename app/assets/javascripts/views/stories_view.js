@@ -26,6 +26,10 @@
       }
 
       this.isExpanded = !this.isExpanded;
+    },
+
+    change: function(event) {
+      this.get('controller').commit();
     }
 
   });

@@ -28,6 +28,11 @@
     @include for-color($light-red);
   }
 
+  &.small {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+
 }
 
 .close-button {
