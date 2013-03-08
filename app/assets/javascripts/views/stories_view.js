@@ -73,7 +73,8 @@
       this.get('controller').addStory({
         title: this.get('titleField').get('value'),
         description: this.get('descriptionField').get('value'),
-        project: this.get('content')
+        project: this.get('content'),
+        storyType: this.get('storyTypeField').get('value')
       });
       hideForm();
       return false;

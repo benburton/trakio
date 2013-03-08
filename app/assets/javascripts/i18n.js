@@ -31,6 +31,7 @@ Em.I18n.translations = {
   'stories.form.header': 'Create Story',
   'stories.form.title_label': 'Title',
   'stories.form.description_label': 'Description',
+  'stories.form.story_type_label': 'Type',
   'stories.form.create_button': 'create',
   'stories.form.cancel_button': 'cancel',
   'stories.update.message': 'Story updated',

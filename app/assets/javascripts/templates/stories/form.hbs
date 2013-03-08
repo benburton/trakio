@@ -9,8 +9,11 @@
 
     <div class="field-pair description">
       <label {{bindAttr for='descriptionField.elementId'}}>{{ t stories.form.description_label }}</label>
-      {{ view Ember.TextArea valueBinding='controller.description' name='decription' viewName='descriptionField' }}
+      {{ view Ember.TextArea valueBinding='controller.description' name='description' viewName='descriptionField' }}
     </div>
+
+    <label class='story_type' {{bindAttr for='storyTypeField.elementId'}}>{{ t stories.form.story_type_label }}</label>
+    {{ view Ember.Select valueBinding='controller.storyType' contentBinding="Trakio.Enums.issueTypes" name='story_type' viewName='storyTypeField' }}
 
     <div class="buttons">
       <input type="submit" class="button confirm" value="create" />
