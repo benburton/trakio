@@ -25,7 +25,7 @@
   }
 
   &.deny {
-    @include for-color($light-red);
+    @include for-color($medium-red);
   }
 
   &.small {

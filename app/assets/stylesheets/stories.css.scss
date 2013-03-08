@@ -20,10 +20,105 @@
     min-height: 80px;
     background: $white;
 
-    .story {
-      padding: 7px 10px;
-      background: $off-white;
+    li.story {
+      vertical-align: middle;
+      padding: 10px 7px 10px 40px;
       border-bottom: 1px solid #b5b5b5;
+      $background: $white;
+      background: $background;
+      position: relative;
+
+      @mixin shadow {
+        @include box-shadow(0px 2px 4px 0 rgba(0,0,0,0.50));
+      }
+
+      &:hover {
+        @include shadow;
+        cursor: pointer;
+        background: $background;
+      }
+
+      .icon {
+        @mixin icon($color) {
+          $dark-color: darken($color, 40);
+          background: $color;
+          color: $dark-color;
+          border: 2px solid $dark-color;
+        }
+
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 3px 7px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 26px;
+        height: 26px;
+
+        &.story {
+          @include icon($light-blue);
+        }
+
+        &.bug {
+          @include icon($light-red);
+        }
+
+        &.task {
+          @include icon($light-gray);
+        }
+
+      }
+
+      .title {
+        display: inline-block;
+      }
+
+      .details {
+        background: $background;
+        padding: 0;
+        display: none;
+        color: $medium-gray;
+        cursor: default;
+        height: 0;
+        font-size: 14px;
+        overflow: hidden;
+
+        p {
+          display: block;
+        }
+
+        .details-properties {
+
+          .details-property {
+
+            .property-key {
+              font-weight: bold;
+              display: inline-block;
+              width: 100px;
+              &:after {
+                content: ":";
+              }
+            }
+
+            .property-value {
+              margin: 0;
+              display: inline-block;
+            }
+          }
+        }
+
+        &.expanded {
+          height: inherit;
+          display: block;
+          overflow: auto;
+          position: relative;
+          top: auto;
+          padding: 0 !important;
+          @include box-shadow(none);
+        }
+      }
     }
   }
 
@@ -140,75 +235,6 @@
           }
         }
 
-      }
-    }
-  }
-
-  .story {
-    $background: $white;
-    position: relative;
-
-    @mixin shadow {
-      @include box-shadow(0px 2px 4px 0 rgba(0,0,0,0.50));
-    }
-
-    &:hover {
-      @include shadow;
-      cursor: pointer;
-      background: $background;
-      .details {
-        @include shadow;
-        position: absolute;
-        display: block;
-        height: 25px;
-        z-index: 1;
-        left: 0;
-        padding: 0 10px;
-      }
-    }
-
-    .details {
-      background: $background;
-      padding: 0;
-      display: none;
-      color: $medium-gray;
-      cursor: default;
-      height: 0;
-      font-size: 14px;
-      overflow: hidden;
-
-      p {
-        display: block;
-      }
-
-      .details-properties {
-
-        .details-property {
-
-          .property-key {
-            font-weight: bold;
-            display: inline-block;
-            width: 100px;
-            &:after {
-              content: ":";
-            }
-          }
-
-          .property-value {
-            margin: 0;
-            display: inline-block;
-          }
-        }
-      }
-
-      &.expanded {
-        height: inherit;
-        display: block;
-        overflow: auto;
-        position: relative;
-        top: auto;
-        padding: 0 !important;
-        @include box-shadow(none);
       }
     }
   }
