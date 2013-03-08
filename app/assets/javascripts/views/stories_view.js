@@ -14,6 +14,7 @@
   }
 
   Trakio.StoryLineItemView = Ember.View.extend({
+    templateName: 'stories/story',
     isExpanded: false,
 
     click: function(event) {

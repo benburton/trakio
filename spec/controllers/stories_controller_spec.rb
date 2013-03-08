@@ -18,6 +18,11 @@ describe StoriesController do
       expect { subject }.to change { Story.count }.by(1)
     end
 
+    it 'is reported by current_user' do
+      subject
+      Story.last.reporter_id.should == user.id
+    end
+
   end
 
 end

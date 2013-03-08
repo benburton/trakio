@@ -1,0 +1,21 @@
+<div class="settings">
+
+  <h2>{{ t settings.header }}</h2>
+  <p class='description'>{{ t settings.description }}</p>
+
+  <form id="settings-form">
+    <ul class='settings-list'>
+      <li class='setting'>
+        <label {{bindAttr for='nameField.elementId'}}>{{ t settings.form.name_label }}</label>
+        {{ view Ember.TextField valueBinding='name' name='name' viewName='naemField' }}
+      </li>
+
+      <li class='setting'>
+        <label {{bindAttr for='emailField.elementId'}}>{{ t settings.form.email_label }}</label>
+        {{ view Ember.TextField valueBinding='email' name='email' viewName='emailField' type='email' }}
+      </li>
+    </ul>
+    <input class="button confirm" type="submit" {{ action 'updateUser' user }} {{ translateAttr value="settings.form.submit" }} />
+  </form>
+
+</div>

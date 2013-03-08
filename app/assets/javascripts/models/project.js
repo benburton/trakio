@@ -3,6 +3,8 @@ Trakio.Project = DS.Model.extend({
   stories: DS.hasMany('Trakio.Story'),
   project_memberships: DS.hasMany('Trakio.ProjectMembership'),
   users: DS.hasMany('Trakio.User'),
+
+  // TODO - Wondering if there's a better way to do this
   emails: function() {
     return $.map(this.get('project_memberships').toArray(), function(membership) {
       var email = membership.get('email') || membership.get('user').get('email');
@@ -12,4 +14,5 @@ Trakio.Project = DS.Model.extend({
       });
     });
   }.property('users.@each', 'project_memberships.@each')
+
 });

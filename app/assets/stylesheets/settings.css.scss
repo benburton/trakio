@@ -1,0 +1,19 @@
+.settings {
+  .description {
+    color: $dark-gray;
+  }
+
+  #settings-form {
+    .settings-list {
+      margin: 20px 0;
+      .setting {
+        margin: 5px 0;
+        label {
+          display: inline-block;
+          min-width: 50px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

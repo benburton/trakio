@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
 
   def create
-    render json: Story.create(story_params)
+    render json: Story.create(story_params.merge!(reporter_id: current_user.id))
   end
 
   private

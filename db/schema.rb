@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307220533) do
+ActiveRecord::Schema.define(:version => 20130308141044) do
 
   create_table "project_memberships", :force => true do |t|
     t.integer "project_id"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20130307220533) do
     t.string  "title"
     t.text    "description"
     t.integer "project_id"
+    t.integer "reporter_id"
+    t.integer "assignee_id"
   end
 
   create_table "users", :force => true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130307220533) do
     t.string   "authentication_token"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

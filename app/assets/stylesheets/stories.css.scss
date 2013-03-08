@@ -171,14 +171,29 @@
       background: $background;
       padding: 0;
       display: none;
+      color: $medium-gray;
       cursor: default;
       height: 0;
+      font-size: 14px;
       overflow: hidden;
 
       p {
         display: block;
-        font-size: 14px;
-        color: $medium-gray;
+      }
+
+      .details-properties {
+        .property-key {
+          margin: 0;
+          font-weight: bold;
+          display: inline-block;
+          &:after {
+            content: ":";
+          }
+        }
+
+        .property-value {
+          display: inline-block;
+        }
       }
 
       &.expanded {

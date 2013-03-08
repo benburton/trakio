@@ -1,3 +1,10 @@
 Trakio.User = DS.Model.extend({
-  email: DS.attr('string')
+  name: DS.attr('string'),
+  email: DS.attr('string'),
+
+  displayName: function() {
+    var name = this.get('name');
+    return name ? name : this.get('email');
+  }.property('name', 'email')
+
 });

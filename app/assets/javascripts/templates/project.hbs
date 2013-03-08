@@ -5,15 +5,7 @@
   <header>{{ t stories.index.list.header }}</header>
   <ul class="stories">
     {{#each stories}}
-
-      {{#view Trakio.StoryLineItemView valueBinding="story"}}
-        <li class="story">
-          {{title}}
-          <div class="details">
-            <p>{{description}}</p>
-          </div>
-        </li>
-      {{/view}}
+      {{view Trakio.StoryLineItemView valueBinding="story"}}
     {{else}}
       <li class="zero">{{ t stories.index.zero_state }}</li>
     {{/each}}

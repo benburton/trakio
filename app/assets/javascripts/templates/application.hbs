@@ -1,22 +1,7 @@
 <header class="application">
-  <div class="content">
-    <div class="logo">
-      {{#linkTo 'index'}}trak.io{{/linkTo}}
-    </div>
-    <nav>
-      <ul>
-        {{#view Trakio.HeaderView isVisibleBinding="isLoggedIn" }}
-          <li>{{#linkTo 'dashboard'}}{{ t header.projects }}{{/linkTo}}</li>
-          <li>{{#linkTo 'logout'}}{{ t header.logout }}{{/linkTo}}</li>
-        {{/view}}
-
-        {{#view Trakio.HeaderView isVisibleBinding="isNotLoggedIn"}}
-          <li>{{#linkTo 'login'}}{{ t header.login }}{{/linkTo}}</li>
-        {{/view}}
-      </ul>
-    </nav>
-  </div>
+  {{ template 'header' }}
 </header>
 <div id="content">
+  <div id="flash"></div>
   {{outlet}}
 </div>

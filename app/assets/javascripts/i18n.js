@@ -18,6 +18,7 @@ Em.I18n.translations = {
   // Header
   // - Logged In
   'header.projects': 'Projects',
+  'header.settings': 'Settings',
   'header.logout': 'Log out',
   // - Logged Out
   'header.login': 'Log In',
@@ -33,7 +34,7 @@ Em.I18n.translations = {
   'stories.form.create_button': 'create',
   'stories.form.cancel_button': 'cancel',
 
-  //Projects
+  // Projects
   // - Index
   'projects.create_button': 'create project',
   'projects.index.zero': "You have no projects! Click the 'create project' button below to get started.",
@@ -42,6 +43,13 @@ Em.I18n.translations = {
   // - Users
   'project.users.header': 'Manage Users',
   'project.users.form.email_label': 'New User',
-  'project.users.form.email_placeholder': 'bob@example.com'
+  'project.users.form.email_placeholder': 'bob@example.com',
 
+  // Settings
+  'settings.header': 'Settings',
+  'settings.description': 'Edit your settings here.',
+  'settings.form.name_label': 'Name',
+  'settings.form.email_label': 'Email',
+  'settings.form.submit': 'Update Settings',
+  'settings.updated_message': 'Your settings have been updated.'
 };

@@ -1,3 +1,8 @@
+@mixin shadow-box {
+  border-radius: 4px;
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
+}
+
 * {
   box-sizing: border-box;
   font-family: $sans-serif;
@@ -65,12 +70,18 @@ header.application {
 
 }
 
+#flash {
+  display: none;
+  background: $dark-gray;
+  color: $white;
+  padding: 10px 30px;
+  text-align: center;
+  @include shadow-box;
+  position: fixed;
+  z-index: 100;
+}
+
 #content {
   @include outer-container;
   margin-top: $header-size;
-}
-
-@mixin shadow-box {
-  border-radius: 4px;
-  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 3px 0px);
 }
