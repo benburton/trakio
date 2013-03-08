@@ -1,18 +1,9 @@
 <h2>{{name}}</h2>
 
-<section class="stories">
-  <nav class="actions">
-    <ul>
-      <li class="action add">
-        {{#view Trakio.StoriesNewButtonView }}
-          <a href="#"></a>
-        {{/view}}
-        {{view Trakio.StoriesNewView contentBinding="this"}}
-      <li>
-    </ul>
-  </nav>
+<section class="stories-container">
+  {{ template 'projects/actions' }}
   <header>{{ t stories.index.list.header }}</header>
-  <ul>
+  <ul class="stories">
     {{#each stories}}
 
       {{#view Trakio.StoryLineItemView valueBinding="story"}}

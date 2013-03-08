@@ -50,6 +50,14 @@
   });
 
 
+  Trakio.StoriesUsersButtonView = Ember.View.extend({
+    visible: false,
+    click: function(event) {
+      Trakio.showForm('#user_management');
+      return false;
+    }
+  });
+
   Trakio.StoriesNewView = Ember.View.extend({
     templateName: 'stories/new',
 

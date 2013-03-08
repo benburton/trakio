@@ -1,0 +1,26 @@
+<div id="user_management">
+
+  {{#view Trakio.CloseButton}}
+    <a class="close-button" href="#"></a>
+  {{/view}}
+
+  <h2>{{ t project.users.header }}</h2>
+
+  <ul class="users">
+    {{#each controller.emails}}
+      <li class="user">
+        <img {{ bindAttr src="imageUrl"}}/>
+        <span class="email">{{email}}</span>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{#view Trakio.AddUserView}}
+    <form>
+      <label {{bindAttr for='emailField.elementId'}}>{{ t project.users.form.email_label }}</label>
+      {{ view Ember.TextField valueBinding='controller.email' name='title' viewName='emailField' type='email' }}
+      <input class="button confirm" type="submit" value="add" />
+    </form>
+  {{/view}}
+
+</div>

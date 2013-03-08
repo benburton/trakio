@@ -28,3 +28,14 @@
   }
 
 }
+
+.close-button {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: $white image-url('close.png') no-repeat;
+  border-radius: 20px;
+  width: 22px;
+  height: 22px;
+  display: block;
+}

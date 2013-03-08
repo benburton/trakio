@@ -5,6 +5,7 @@ class AuthTokenController < ApplicationController
   def login
     user = User.where(email: user_params[:email]).first
     if user && user.valid_password?(user_params[:password])
+      params[:auth] = user.authentication_token
       render json: user, status: 200
     else
       render json: {message: 'Error with your login or password'}, status: 401

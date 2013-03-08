@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-    render json: Project.where(user_id: current_user.id)
+    render json: current_user.projects
   end
 
   def show
@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(project_params.merge(user_id: current_user.id))
+    project = Project.create(project_params.merge(owner: current_user))
     render json: project
   end
 

@@ -5,6 +5,16 @@ Trakio.ProjectController = Ember.ObjectController.extend({
     this.store.commit();
   },
 
+  addUser: function(email) {
+    var self = this;
+    var membership = Trakio.ProjectMembership.createRecord({
+      project: self.get('model'),
+      email: email
+    });
+    this.get('model').get('project_memberships').pushObject(membership);
+    this.store.commit();
+  },
+
   expand: function(el) {
     $('.details').removeClass('expanded');
     var $details = $('.details', el);

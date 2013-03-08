@@ -6,9 +6,11 @@
 //= require CLDR
 //= require ember-i18n
 //= require i18n
+//= require jquery.md5
 //= require_self
 //= require routes
 //= require store
+//= require util
 //= require_tree ./routes
 //= require_tree ./helpers
 //= require_tree ./controllers

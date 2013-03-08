@@ -1,7 +1,7 @@
-.stories {
+.stories-container {
   @include shadow-box;
   border: 1px solid #bebebe;
-  margin: 50px 0;
+  margin: 50px 0 50px 41px;
   font-family: $sans-serif;
 
   header {
@@ -15,8 +15,11 @@
     padding: 7px 10px;
   }
 
-  ul {
+  .stories {
     border-radius: 4px;
+    min-height: 80px;
+    background: $white;
+
     .story {
       padding: 7px 10px;
       background: $off-white;
@@ -24,36 +27,51 @@
     }
   }
 
-  .actions {
+  .actions-container {
     @include outer-container;
     position: fixed;
     z-index: 2;
-    margin: 30px 0 0 -33px;
+    margin: 30px 0 0 -41px;
 
-    ul {
+    .actions {
       @include span-columns(1);
       .action {
-        height: 32px;
-        width: 32px;
+        height: 40px;
+        width: 40px;
 
         &.add {
           position: relative;
           a {
-            background: $white url('icons/stories/add.png') no-repeat 7px 7px;
+            background: $white image-url('icons/stories/add.png') no-repeat center center;
 
             &:hover {
-              background: #f2f2f2 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+              background: $highlighted-white image-url('icons/stories/add-selected.png') no-repeat center center;
             }
 
             &:active {
-              background: #e0e0e0 url('icons/stories/add-selected.png') no-repeat 7px 7px;
+              background: $active-white image-url('icons/stories/add-selected.png') no-repeat center center;
+            }
+          }
+        }
+
+        &.users {
+          position: relative;
+          a {
+            background: $white image-url('icons/stories/users.png') no-repeat center center;
+
+            &:hover {
+              background: $highlighted-white image-url('icons/stories/users.png') no-repeat center center;
+            }
+
+            &:active {
+              background: $active-white image-url('icons/stories/users.png') no-repeat center center;
             }
           }
         }
 
         a {
-          height: 32px;
-          width: 32px;
+          height: 40px;
+          width: 40px;
           cursor: pointer;
           display: block;
           border: 1px solid #cccccc;
@@ -71,7 +89,7 @@
           }
         }
 
-        form {
+        #new-story {
           @include shadow-box;
           background: $off-white;
           position: absolute;
@@ -197,4 +215,61 @@
   position: absolute;
   background: rgba(0,0,0,0.1) image-url('loading.gif') no-repeat center center;
   border-radius: 4px;
+}
+
+#user_management {
+  border: 1px solid #939393;
+  display: none;
+  position: fixed;
+  opacity: 0;
+  @include shadow-box;
+  background: $white;
+  padding: 20px;
+  width: 500px;
+  z-index: 10;
+
+  .users {
+    max-height: 400px;
+    overflow-y: scroll;
+    margin: 10px;
+    .user {
+      margin: 10px 0;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 35px;
+        height: auto;
+        margin-right: 15px;
+        border-radius: 4px;
+        border: 1px solid $dark-gray;
+      }
+      .email {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+        font-size: 18px;
+        color: dark-gray;
+      }
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-weight: bold;
+    width: 80px;
+  }
+
+  input[type=email] {
+    display: inline-block;
+    width: 250px;
+  }
+
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  .button {
+    margin-left: 10px;
+  }
+
 }

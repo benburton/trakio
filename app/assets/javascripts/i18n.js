@@ -38,6 +38,10 @@ Em.I18n.translations = {
   'projects.create_button': 'create project',
   'projects.index.zero': "You have no projects! Click the 'create project' button below to get started.",
   // - Form
-  'projects.form.name_label': 'Project Name'
+  'projects.form.name_label': 'Project Name',
+  // - Users
+  'project.users.header': 'Manage Users',
+  'project.users.form.email_label': 'New User',
+  'project.users.form.email_placeholder': 'bob@example.com'
 
 };

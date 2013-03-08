@@ -1,0 +1,17 @@
+<nav class="actions-container">
+  <ul class="actions">
+    <li class="action add">
+      {{#view Trakio.StoriesNewButtonView }}
+        <a href="#"></a>
+      {{/view}}
+      {{view Trakio.StoriesNewView contentBinding="this"}}
+    <li>
+    <li class="action users">
+      {{#view Trakio.StoriesUsersButtonView}}
+        <a href="#"></a>
+      {{/view}}
+    </li>
+  </ul>
+</nav>
+
+{{view Trakio.ManageUsersView contentBinding="this"}}

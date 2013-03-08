@@ -12,9 +12,9 @@ Trakio::Application.routes.draw do
     end
   end
 
-  #resources :stories, :except => :edit, constraints: FormatTest.new(:json)
   resources :projects, constraints: FormatTest.new(:json)
   resources :stories, :only => :create, constraints: FormatTest.new(:json)
+  resources :project_memberships, :only => :create, constraints: FormatTest.new(:json)
 
   match '/auth', to: 'auth_token#login', :via => :post
   match '/register', to: 'registration#create', :via => :post

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ProjectsController do
 
   let(:user) { create(:user) }
-  let!(:project) { create(:project, user: user) }
+  let!(:project) { create(:project, owner: user) }
 
   describe "GET index" do
     subject { authed_get :index }
@@ -42,7 +42,7 @@ describe ProjectsController do
     it { should be_success }
 
     it "should create a new project" do
-      expect { subject }.to change { Project.where(user_id: user.id).count }.by(1)
+      expect { subject }.to change { user.projects.count }.by(1)
     end
 
   end
