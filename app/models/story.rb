@@ -15,6 +15,7 @@ class Story < ActiveRecord::Base
   private
   def set_defaults
     self.story_type ||= StoriesHelper::DEFAULT_STORY_TYPE
+    self.state ||= StoriesHelper::DEFAULT_STATE
   end
 
 end

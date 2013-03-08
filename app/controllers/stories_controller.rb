@@ -17,11 +17,11 @@ class StoriesController < ApplicationController
 
   private
   def create_params
-    params.require(:story).permit(:title, :description, :story_type, :project_id)
+    params.require(:story).permit(:title, :description, :story_type, :project_id, :state)
   end
 
   def update_params
-    params.require(:story).permit(:title, :description, :story_type)
+    params.require(:story).permit(:title, :description, :story_type, :state)
   end
 
 end

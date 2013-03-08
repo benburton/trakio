@@ -4,6 +4,8 @@ Trakio.Story = DS.Model.extend({
   project: DS.belongsTo('Trakio.Project'),
   reporter: DS.belongsTo('Trakio.User'),
   storyType: DS.attr('string'),
+  state: DS.attr('string'),
+
   typeAbbreviation: function() {
     var storyType = this.get('storyType');
     return storyType ? storyType.charAt(0).toUpperCase() : '';

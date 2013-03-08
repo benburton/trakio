@@ -27,11 +27,13 @@ describe Story do
 
   describe '.set_defaults' do
 
-    it 'should set story type' do
-      story = build(:story)
-      story.story_type.should == nil
-      story.save!
-      story.story_type.should_not == nil
+    ['story_type', 'state'].each do |field|
+      it "should set '#{field}'" do
+        story = build(:story)
+        story.send(field).should == nil
+        story.save!
+        story.send(field).should_not == nil
+      end
     end
 
   end

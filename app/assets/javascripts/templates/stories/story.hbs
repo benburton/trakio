@@ -1,4 +1,4 @@
-<li class="story">
+<li {{ bindAttr class=":story state"}}>
   <div {{ bindAttr class=":icon storyType" }}>{{ typeAbbreviation }}</div>
   <span class="title">{{title}}</span>
   <div class="details">
@@ -18,6 +18,11 @@
           {{ view Ember.Select valueBinding="storyType" contentBinding="Trakio.Enums.issueTypes" }}
         </dd>
       </div>
+      <div class="details-property">
+        <dt class="property-key">State</dt>
+        <dd class="property-value">
+          {{ view Ember.Select valueBinding="state" contentBinding="Trakio.Enums.states" }}
+        </dd>
     </dl>
   </div>
 </li>

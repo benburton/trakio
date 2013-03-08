@@ -74,7 +74,8 @@
         title: this.get('titleField').get('value'),
         description: this.get('descriptionField').get('value'),
         project: this.get('content'),
-        storyType: this.get('storyTypeField').get('value')
+        storyType: this.get('storyTypeField').get('value'),
+        state: 'not_started'
       });
       hideForm();
       return false;

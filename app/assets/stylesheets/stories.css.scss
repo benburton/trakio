@@ -21,6 +21,14 @@
     background: $white;
 
     li.story {
+
+      @mixin icon($color) {
+        $dark-color: darken($color, 40);
+        background: $color;
+        color: $dark-color;
+        border: 2px solid $dark-color;
+      }
+
       vertical-align: middle;
       padding: 10px 7px 10px 40px;
       border-bottom: 1px solid #b5b5b5;
@@ -32,6 +40,21 @@
         @include box-shadow(0px 2px 4px 0 rgba(0,0,0,0.50));
       }
 
+      &.finished {
+        background: $light-gray;
+        color: $medium-gray;
+        &:hover {
+          background: $light-gray;
+          color: $medium-gray;
+        }
+
+        .icon {
+          &.story, &.bug, &.task {
+            @include icon($medium-gray);
+          }
+        }
+      }
+
       &:hover {
         @include shadow;
         cursor: pointer;
@@ -39,13 +62,6 @@
       }
 
       .icon {
-        @mixin icon($color) {
-          $dark-color: darken($color, 40);
-          background: $color;
-          color: $dark-color;
-          border: 2px solid $dark-color;
-        }
-
         display: inline-block;
         margin-right: 5px;
         font-weight: bold;
@@ -76,7 +92,6 @@
       }
 
       .details {
-        background: $background;
         padding: 0;
         display: none;
         color: $medium-gray;

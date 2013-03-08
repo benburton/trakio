@@ -1,5 +1,5 @@
 class StorySerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :project_id, :story_type
+  attributes :id, :title, :description, :project_id, :story_type, :state
 
   has_one :reporter, :embed => :ids
 
