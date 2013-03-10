@@ -1,1 +1,23 @@
-{{ template 'stories/form' }}
+<form id="new-story">
+  <fieldset>
+    <legend>{{ t stories.form.header }}</legend>
+
+    <div class="field-pair">
+      <label {{bindAttr for='titleField.elementId'}}>{{ t stories.form.title_label }}</label>
+      {{ view Ember.TextField valueBinding='controller.title' name='title' viewName='titleField' }}
+    </div>
+
+    <div class="field-pair description">
+      <label {{bindAttr for='descriptionField.elementId'}}>{{ t stories.form.description_label }}</label>
+      {{ view Ember.TextArea valueBinding='controller.description' name='description' viewName='descriptionField' }}
+    </div>
+
+    <label class='story_type' {{bindAttr for='storyTypeField.elementId'}}>{{ t stories.form.story_type_label }}</label>
+    {{ view Ember.Select valueBinding='controller.storyType' contentBinding="Trakio.Enums.issueTypes" name='story_type' viewName='storyTypeField' }}
+
+    <div class="buttons">
+      <input type="submit" class="button confirm" value="create" />
+      {{#view Trakio.StoriesNewCancelButtonView }}<button type="button" class="button deny">{{ t stories.form.cancel_button }}</button>{{/view}}
+    </div>
+  </fieldset>
+</form>

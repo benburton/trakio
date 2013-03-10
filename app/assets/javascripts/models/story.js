@@ -19,6 +19,8 @@ Trakio.Story = DS.Model.extend({
 
   didCreate: function() {
     $('#loading').remove();
+    Trakio.flash('stories.create.message');
+    Trakio.hideForm('#new-story');
   },
 
   didUpdate: function() {

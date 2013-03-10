@@ -1,18 +1,5 @@
 (function() {
 
-  function hideForm() {
-    var $form = $('#new-story');
-    var $fieldset = $('fieldset', $form);
-    $fieldset.animate({"opacity": 0}, 300, function() {
-      var padding = $form.css('padding');
-      $form.css({'padding':  0});
-      $form.animate({"width": "0"}, 300, function() {
-        $form.hide();
-        $form.css('padding', padding);
-      });
-    });
-  }
-
   Trakio.StoryLineItemView = Ember.View.extend({
     templateName: 'stories/story',
     isExpanded: false,
@@ -38,17 +25,7 @@
     visible: false,
 
     click: function(event) {
-      if (this.visible) {
-        hideForm();
-      } else {
-        var $form = $('form', $(event.target).closest('.action'));
-        var $fieldset = $('fieldset', $form);
-        $form.show();
-        $form.animate({"width": "500px"}, 300, function() {
-          $fieldset.animate({"opacity": 1}, 300);
-        });
-      }
-      this.visible = !this.visible;
+      Trakio.showForm('#new-story');
       return false;
     }
 
@@ -77,14 +54,16 @@
         storyType: this.get('storyTypeField').get('value'),
         state: 'not_started'
       });
-      hideForm();
       return false;
     }
 
   });
 
   Trakio.StoriesNewCancelButtonView = Ember.View.extend({
-    click: hideForm
+    click: function() {
+      Trakio.hideForm('#new-story');
+      return false;
+    }
   });
 
 })();
