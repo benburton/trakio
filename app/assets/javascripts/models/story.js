@@ -13,6 +13,10 @@ Trakio.Story = DS.Model.extend({
     return storyType ? storyType.charAt(0).toUpperCase() : '';
   }.property('storyType'),
 
+  started: function() {
+    return this.get('state') == 'started';
+  }.property('state'),
+
   didCreate: function() {
     $('#loading').remove();
   },

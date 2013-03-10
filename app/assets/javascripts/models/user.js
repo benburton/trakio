@@ -5,6 +5,10 @@ Trakio.User = DS.Model.extend({
   displayName: function() {
     var name = this.get('name');
     return name ? name : this.get('email');
-  }.property('name', 'email')
+  }.property('name', 'email'),
+
+  imageSrc: function() {
+    return 'http://www.gravatar.com/avatar/' + $.md5(this.get('email')) + '.jpg';
+  }.property('email')
 
 });

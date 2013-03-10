@@ -1,6 +1,9 @@
 <li {{ bindAttr class=":story state"}}>
   <div {{ bindAttr class=":icon storyType" }}>{{ typeAbbreviation }}</div>
   <span class="title">{{title}}</span>
+  {{#if started}}
+    <img class="assignee-image" {{ bindAttr src="assignee.imageSrc" }} />
+  {{/if}}
   <div class="details">
 
     <p>{{description}}</p>

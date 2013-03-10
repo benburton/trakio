@@ -55,6 +55,10 @@
         }
       }
 
+      &.started {
+        background: $light-green;
+      }
+
       &:hover {
         @include shadow;
         cursor: pointer;
@@ -85,6 +89,16 @@
           @include icon($light-gray);
         }
 
+      }
+
+      .assignee-image {
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 26px;
+        height: 26px;
+        border: 1px solid $medium-gray;
       }
 
       .title {
