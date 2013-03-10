@@ -1,8 +1,10 @@
 Trakio.Story = DS.Model.extend({
+
   title: DS.attr('string'),
   description: DS.attr('string'),
   project: DS.belongsTo('Trakio.Project'),
   reporter: DS.belongsTo('Trakio.User'),
+  assignee: DS.belongsTo('Trakio.User'),
   storyType: DS.attr('string'),
   state: DS.attr('string'),
 
@@ -18,4 +20,5 @@ Trakio.Story = DS.Model.extend({
   didUpdate: function() {
     Trakio.flash('stories.update.message');
   }
+
 });

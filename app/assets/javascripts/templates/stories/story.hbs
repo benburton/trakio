@@ -12,6 +12,12 @@
           <dd class="property-value">{{reporter.displayName}}</dd>
         </div>
       {{/if}}
+      {{#if assignee}}
+        <div class="details-property">
+          <dt class="property-key">Assigned To</dt>
+          <dd class="property-value">{{assignee.displayName}}</dd>
+        </div>
+      {{/if}}
       <div class="details-property">
         <dt class="property-key">Story Type</dt>
         <dd class="property-value">

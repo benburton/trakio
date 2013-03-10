@@ -52,6 +52,16 @@ describe StoriesController do
       end
     end
 
+    context 'state transitions to started' do
+      let(:new_story_state) { 'started' }
+
+      it 'should assign to current user' do
+        subject
+        story.reload.assignee.should == user
+      end
+
+    end
+
     context "user is not a member of the story's project" do
       let(:owner) { create(:user) }
       it 'should be Forbidden' do
