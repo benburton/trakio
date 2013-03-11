@@ -1,4 +1,5 @@
-<li {{ bindAttr class=":story state"}}>
+<li {{ bindAttr class=":story state" id="elementId"}}>
+  <div class="drag"></div>
   <div {{ bindAttr class=":icon storyType" }}>{{ typeAbbreviation }}</div>
   <span class="title">{{title}}</span>
   {{#if started}}

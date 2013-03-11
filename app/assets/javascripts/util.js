@@ -25,10 +25,12 @@
   };
 
   Trakio.flash = function(messageKey) {
-    $('#flash').html(Em.I18n.t(messageKey));
-    Trakio.showForm('#flash', {top: '30px'});
-    setTimeout(function() {
-      Trakio.hideForm('#flash');
-    }, flashDuration);
+    if (!$('#flash:visible').length) {
+      $('#flash').html(Em.I18n.t(messageKey));
+      Trakio.showForm('#flash', {top: '30px'});
+      setTimeout(function() {
+        Trakio.hideForm('#flash');
+      }, flashDuration);
+    }
   };
 })();

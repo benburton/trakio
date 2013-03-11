@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :name
 
-  has_many :stories
+  has_many :stories, :order => :position
   has_many :project_memberships
   has_many :users, :through => :project_memberships
 

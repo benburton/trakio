@@ -30,7 +30,7 @@
       }
 
       vertical-align: middle;
-      padding: 10px 7px 10px 40px;
+      padding: 10px 7px 10px 55px;
       border-bottom: 1px solid #b5b5b5;
       $background: $white;
       background: $background;
@@ -65,6 +65,16 @@
         background: $background;
       }
 
+      .drag {
+        cursor: move;
+        position: absolute;
+        top: 12px;
+        left: 7px;
+        background: image-url('drag_handle.png') no-repeat;
+        width: 10px;
+        height: 18px;
+      }
+
       .icon {
         display: inline-block;
         margin-right: 5px;
@@ -73,7 +83,7 @@
         padding: 3px 7px;
         position: absolute;
         top: 6px;
-        left: 6px;
+        left: 20px;
         width: 26px;
         height: 26px;
 

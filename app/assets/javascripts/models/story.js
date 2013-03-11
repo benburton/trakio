@@ -1,5 +1,6 @@
 Trakio.Story = DS.Model.extend({
 
+  position: DS.attr('number'),
   title: DS.attr('string'),
   description: DS.attr('string'),
   project: DS.belongsTo('Trakio.Project'),
@@ -7,6 +8,10 @@ Trakio.Story = DS.Model.extend({
   assignee: DS.belongsTo('Trakio.User'),
   storyType: DS.attr('string'),
   state: DS.attr('string'),
+
+  elementId: function() {
+    return 'story_' + this.get('id');
+  }.property('id'),
 
   typeAbbreviation: function() {
     var storyType = this.get('storyType');

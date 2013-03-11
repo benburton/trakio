@@ -24,7 +24,7 @@ class StoriesController < ApplicationController
   end
 
   def update_params
-    params.require(:story).permit(:title, :description, :story_type, :state)
+    params.require(:story).permit(:title, :description, :story_type, :state, :position)
   end
 
 end

@@ -7,9 +7,12 @@ gem 'rails-api'
 gem 'strong_parameters'
 gem 'active_model_serializers'
 
+gem 'acts_as_list'
+
 gem 'devise'
 gem 'sass-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'jquery-cookie-rails'
 gem 'handlebars-rails'
 gem 'haml'

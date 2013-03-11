@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery.cookie
+//= require jquery.ui.sortable
 //= require handlebars
 //= require ember
 //= require ember-data
