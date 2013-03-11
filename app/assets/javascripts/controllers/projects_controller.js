@@ -7,6 +7,16 @@ Trakio.ProjectController = Ember.ObjectController.extend({
     this.store.commit();
   },
 
+  deleteStory: function(story) {
+    var self = this;
+    Trakio.confirm(Em.I18n.t('stories.delete.confirmation'), {
+      yes: function() {
+        story.deleteRecord();
+        self.store.commit();
+      }
+    });
+  },
+
   addUser: function(email) {
     var self = this;
     var membership = Trakio.ProjectMembership.createRecord({

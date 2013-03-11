@@ -18,6 +18,16 @@ class StoriesController < ApplicationController
     end
   end
 
+  def destroy
+    story = Story.find(params[:id])
+    unless current_user.projects.include? story.project
+      render json: { message: "You do not have permission to delete this story." }, status: 403
+    else
+      story.destroy
+      render json: {}, status: 200
+    end
+  end
+
   private
   def create_params
     params.require(:story).permit(:title, :description, :story_type, :project_id, :state)

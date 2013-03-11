@@ -74,4 +74,24 @@ describe StoriesController do
 
   end
 
+  describe 'DELETE destroy' do
+    subject { authed_delete :destroy, id: story.id }
+    let!(:story) { create(:story, project: project) }
+
+    it { should be_success }
+
+    it 'should delete story' do
+      expect { subject }.to change { Story.count }.by(-1)
+    end
+
+    context "user is not a member of the story's project" do
+      let(:owner) { create(:user) }
+      it 'should be Forbidden' do
+        subject
+        response.status.should == 403
+      end
+    end
+
+  end
+
 end

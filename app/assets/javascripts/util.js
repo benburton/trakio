@@ -17,8 +17,9 @@
     });
   }
 
-  Trakio.hideForm = function(selector) {
+  Trakio.hideForm = function(selector, callback) {
     var $form = $(selector);
+    callback = callback || function(){};
     $form.animate({opacity: 0, top: '+=15'}, 'fast', function() {
       $form.hide();
     });
@@ -33,4 +34,35 @@
       }, flashDuration);
     }
   };
+
+  Trakio.confirm = function(message, options) {
+    options = options || {};
+    options.yes = options.yes || function(){};
+    options.no = options.no || function(){};
+
+    Ember.View.create({
+      templateName: 'confirmation',
+      message: message,
+
+      click: function(e) {
+        var $target = $(e.target);
+        if ($target.hasClass('yes')) {
+          options.yes();
+          Trakio.hideForm('#confirmation-dialog', function() {
+            this.remove();
+          });
+        } else if ($target.hasClass('no')) {
+          options.no();
+          Trakio.hideForm('#confirmation-dialog', function() {
+            this.remove();
+          });
+        }
+        return false;
+      },
+
+      didInsertElement: function() {
+        Trakio.showForm('#confirmation-dialog');
+      }
+    }).append();
+  }
 })();

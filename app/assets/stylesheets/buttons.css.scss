@@ -8,6 +8,7 @@
   }
 
   @include for-color($light-blue);
+  cursor: pointer;
   border: none;
   color: $white;
   text-decoration: none;
@@ -21,7 +22,7 @@
   }
 
   &.confirm {
-
+    @include for-color($light-blue);
   }
 
   &.deny {

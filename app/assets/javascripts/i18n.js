@@ -36,6 +36,8 @@ Em.I18n.translations = {
   'stories.form.cancel_button': 'cancel',
   'stories.update.message': 'Story updated',
   'stories.create.message': 'Story created',
+  // - Other
+  'stories.delete.confirmation': 'Are you sure you want to delete this story?',
 
   // Projects
   // - Index
