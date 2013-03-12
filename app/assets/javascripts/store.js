@@ -1,4 +1,3 @@
-// TODO: Remove me when ember-data has better error handling!
 $(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
   if (jqXHR.status === 401) {
     document.location.href = '/#/login';

@@ -11,7 +11,6 @@ class StoriesController < ApplicationController
       render json: { message: "You do not have permission to modify this story." }, status: 403
     else
       attributes = update_params
-      # TODO - Maybe introduce 'state_machine' gem and make this part of a transition
       attributes[:assignee] = current_user if attributes[:state] == 'started'
       story.update_attributes(attributes)
       render json: story
