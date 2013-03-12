@@ -8,6 +8,7 @@ Trakio.Story = DS.Model.extend({
   assignee: DS.belongsTo('Trakio.User'),
   storyType: DS.attr('string'),
   state: DS.attr('string'),
+  comments: DS.hasMany('Trakio.Comment'),
 
   elementId: function() {
     return 'story_' + this.get('id');

@@ -4,6 +4,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require moment
 //= require CLDR
 //= require ember-i18n
 //= require i18n

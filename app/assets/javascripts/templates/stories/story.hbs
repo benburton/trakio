@@ -7,7 +7,7 @@
   {{/if}}
   <div class="details">
 
-    <p>{{description}}</p>
+    <p class="description">{{description}}</p>
 
     <dl class="details-properties">
       {{#if reporter}}
@@ -34,6 +34,11 @@
           {{ view Ember.Select valueBinding="state" contentBinding="Trakio.Enums.states" }}
         </dd>
     </dl>
-    <a {{ action 'deleteStory' this }} class="button small deny">Delete</a>
+
+    {{ view Trakio.CommentsView }}
+
+    <div class="actions">
+      <a {{ action 'deleteStory' this }} class="button small deny delete-button">Delete</a>
+    </div>
   </div>
 </li>

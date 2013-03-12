@@ -39,6 +39,10 @@ Em.I18n.translations = {
   // - Other
   'stories.delete.confirmation': 'Are you sure you want to delete this story?',
 
+  // Comments
+  'stories.comments.header': 'Comments',
+  'stories.comments.add_button': 'Comment',
+
   // Projects
   // - Index
   'projects.create_button': 'create project',

@@ -12,6 +12,8 @@ class Story < ActiveRecord::Base
   belongs_to :reporter, class_name: 'User'
   belongs_to :assignee, class_name: 'User'
 
+  has_many :comments
+
   private
   def set_defaults
     self.story_type ||= StoriesHelper::DEFAULT_STORY_TYPE

@@ -2,7 +2,7 @@
 
 <section class="stories-container">
   {{ template 'projects/actions' }}
-  <header>{{ t stories.index.list.header }}</header>
+  <header class="stories-header">{{ t stories.index.list.header }}</header>
   <ul class="stories sortable">
     {{#each stories}}
       {{view Trakio.StoryLineItemView valueBinding="story"}}

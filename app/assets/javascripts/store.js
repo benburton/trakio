@@ -41,3 +41,7 @@ Trakio.Store = DS.Store.extend({
     }
   })
 });
+
+DS.RESTAdapter.configure('Trakio.Comment', {
+  sideloadAs: 'comments'
+});

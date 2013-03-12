@@ -1,0 +1,19 @@
+<div class="comments">
+  <header class="comments-header">{{ t 'stories.comments.header' }}</header>
+  <ul class="comment-list">
+  {{#each comments}}
+    <li class="comment">
+      <span class="comment-user">{{user.displayName}}</span>
+      <span class="comment-timestamp">{{createdAtString}}</span>
+      <p class="comment-body">{{body}}</p>
+    </li>
+  {{/each}}
+  </ul>
+  <form class="comment-form">
+    <input type="hidden" name="story_id" {{ bindAttr value='id' }} />
+    {{ view Ember.TextArea valueBinding='controller.comment' name='comment' viewName='commentField' class='comment-text' }}
+    {{#view Trakio.AddCommentButton}}
+      <a href="#" class="button small comment-button">{{ t 'stories.comments.add_button' }}</a>
+    {{/view}}
+  </form>
+</div>

@@ -1,8 +1,9 @@
 class StorySerializer < ActiveModel::Serializer
 
-  attributes :id, :title, :description, :project_id, :story_type, :state, :position
+  embed :ids, include: true
 
-  has_one :reporter, :embed => :ids
-  has_one :assignee, :embed => :ids
+  attributes :id, :title, :description, :project_id, :story_type, :state, :position, :reporter_id, :assignee_id
+
+  has_many :comments, :embed => :ids
 
 end
