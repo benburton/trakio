@@ -30,7 +30,6 @@
       }
 
       vertical-align: middle;
-      padding: 10px 7px 10px 55px;
       border-bottom: 1px solid #b5b5b5;
       $background: $white;
       background: $background;
@@ -38,6 +37,11 @@
 
       @mixin shadow {
         @include box-shadow(0px 2px 4px 0 rgba(0,0,0,0.50));
+      }
+
+      .story-title {
+        display: block;
+        padding: 10px 7px 10px 55px;
       }
 
       &.finished {
@@ -111,12 +115,8 @@
         border: 1px solid $medium-gray;
       }
 
-      .title {
-        display: inline-block;
-      }
-
       .details {
-        padding: 0;
+        padding: 0 7px 10px 55px;
         display: none;
         color: $medium-gray;
         cursor: default;
@@ -212,7 +212,6 @@
           overflow: auto;
           position: relative;
           top: auto;
-          padding: 0 !important;
           @include box-shadow(none);
         }
       }

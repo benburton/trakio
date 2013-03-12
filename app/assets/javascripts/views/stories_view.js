@@ -2,23 +2,24 @@
 
   Trakio.StoryLineItemView = Ember.View.extend({
     templateName: 'stories/story',
-    isExpanded: false,
-
-    click: function(event) {
-      if (this.isExpanded) {
-        this.get('controller').contract(event.target);
-      }
-      else {
-        this.get('controller').expand(event.target);
-      }
-
-      this.isExpanded = !this.isExpanded;
-    },
-
     change: function(event) {
       this.get('controller').commit();
     }
+  });
 
+  Trakio.StoryTitleView = Ember.View.extend({
+    isExpanded: false,
+    click: function(event) {
+      var $story = $(event.target).closest('.story');
+      if (this.isExpanded) {
+        this.get('controller').contract($story);
+      }
+      else {
+        this.get('controller').expand($story);
+      }
+
+      this.isExpanded = !this.isExpanded;
+    }
   });
 
   Trakio.StoriesNewButtonView = Ember.View.extend({

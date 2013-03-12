@@ -1,7 +1,9 @@
 <li {{ bindAttr class=":story state" id="elementId"}}>
   <div class="drag"></div>
   <div {{ bindAttr class=":icon storyType" }}>{{ typeAbbreviation }}</div>
-  <span class="title">{{title}}</span>
+  {{#view Trakio.StoryTitleView}}
+    <span class="story-title">{{title}}</span>
+  {{/view}}
   {{#if started}}
     <img class="assignee-image" {{ bindAttr src="assignee.imageSrc" }} />
   {{/if}}

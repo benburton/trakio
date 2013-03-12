@@ -1,5 +1,3 @@
-var ben;
-
 Trakio.ProjectController = Ember.ObjectController.extend({
 
   addStory: function(storyParams) {
