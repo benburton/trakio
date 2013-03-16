@@ -34,6 +34,11 @@ group :test do
   gem 'faker'
 end
 
+group :development, :test do
+  gem 'jasminerice'
+  gem 'guard-jasmine'
+end
+
 group :development do
   gem 'sqlite3'
 end

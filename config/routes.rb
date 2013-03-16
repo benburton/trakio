@@ -8,7 +8,11 @@ Trakio::Application.routes.draw do
     end
 
     def matches?(request)
-      request.format == mime_type
+      if %w(development test).include? Rails.env
+        request.path != '/jasmine' && request.format == mime_type
+      else
+        request.format == mime_type
+      end
     end
   end
 
