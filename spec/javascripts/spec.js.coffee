@@ -5,6 +5,8 @@
 # spec/javascripts/*_spec.js.coffee
 # spec/javascripts/*_spec.js
 # spec/javascripts/*_spec.js.erb
-
-#= require jquery
+#= require_self
+#= require application
 #= require_tree .
+
+Ember.testing = true
