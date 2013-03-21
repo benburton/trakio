@@ -2,6 +2,11 @@
 
 trak.io is a software management tool built as an exercise in learning [rails-api](https://github.com/rails-api) with [ember-js](https://github.com/emberjs).
 
+There are many things that need to be done for this project. Namely:
+ - Figure integration with Jasmine tests
+ - Add integration testing
+ - Evaluate whether idiomatic Ember patterns are used for communication between views and controllers
+
 ## Setup
 
     $ git clone ssh://git@bitbucket.org/benburton/trakio.git
