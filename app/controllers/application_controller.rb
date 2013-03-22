@@ -13,6 +13,7 @@ class ApplicationController < ActionController::API
   private
 
   def authorize_token
+    puts params[:auth]
     unless current_user
       render json: {message: "Invalid authentication token"}, status: 401
     end
