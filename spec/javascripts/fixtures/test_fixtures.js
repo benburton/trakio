@@ -7,3 +7,7 @@ Trakio.Store = DS.Store.extend({
   revision: 11,
   adapter: Trakio.Adapter.create()
 });
+
+
+Trakio.Project.FIXTURES = [];
+Trakio.User.FIXTURES = [];

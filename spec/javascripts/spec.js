@@ -8,4 +8,4 @@
 //= require application
 //= require_tree .
 //= require_self
-
+//= require fixtures/test_fixtures
