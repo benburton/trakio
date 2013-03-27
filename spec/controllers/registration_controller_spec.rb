@@ -18,6 +18,11 @@ describe RegistrationController do
       response.status.should == 200
     end
 
+    it "should return authentication token in response" do
+      subject
+      response.body.should include User.last.authentication_token
+    end
+
     context "with bad data" do
       let(:password_confirmation) { "not the password you're looking for" }
 

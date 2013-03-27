@@ -5,6 +5,7 @@ class RegistrationController < ApplicationController
   def create
     user = User.create(user_params)
     if user.valid?
+      @user = user
       render json: user
     else
       render json: user.errors.full_messages, status: 422

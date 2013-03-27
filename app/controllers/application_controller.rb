@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
   before_filter :authorize_token
 
   def current_user
-    return nil if params[:auth].blank?
+    return nil if params[:auth].blank? && @user.blank?
     @user ||= User.find_by_authentication_token(params[:auth])
     @user
   end
@@ -13,7 +13,6 @@ class ApplicationController < ActionController::API
   private
 
   def authorize_token
-    puts params[:auth]
     unless current_user
       render json: {message: "Invalid authentication token"}, status: 401
     end
