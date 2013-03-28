@@ -11,14 +11,14 @@
     isExpanded: false,
     click: function(event) {
       var $story = $(event.target).closest('.story');
-      if (this.isExpanded) {
+      if (this.get('isExpanded')) {
         this.get('controller').contract($story);
       }
       else {
         this.get('controller').expand($story);
       }
 
-      this.isExpanded = !this.isExpanded;
+      this.set('isExpanded', !this.get('isExpanded'));
     }
   });
 
