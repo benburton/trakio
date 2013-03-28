@@ -1,11 +1,15 @@
 Trakio.ApplicationController = Ember.Controller.extend({
 
-  isLoggedIn: Trakio.get('authentication_token') != null,
-  isNotLoggedIn: !(Trakio.get('authentication_token') != null),
+  isLoggedIn: function() {
+    return Trakio.get('authentication_token') != null;
+  }.property('Trakio.authentication_token'),
+
+  isNotLoggedIn: function() {
+    return !this.get('isLoggedIn');
+  }.property('Trakio.authentication_token'),
 
   toggleLoggedIn: function() {
     this.set('isLoggedIn', Trakio.authentication_token != null);
-    this.set('isNotLoggedIn', !this.get('isLoggedIn'));
   }.observes('Trakio.authentication_token'),
 
   loadCurrentUser: function() {
