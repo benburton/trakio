@@ -6,7 +6,7 @@ Trakio.Project = DS.Model.extend({
 
   emails: function() {
     return $.map(this.get('project_memberships').toArray(), function(membership) {
-      var email = membership.get('email') || membership.get('user.email');
+      var email = membership.get('email') || membership.get('user').get('email');
       return Ember.Object.create({
         email: email,
         imageUrl: 'http://www.gravatar.com/avatar/' + $.md5(email) + '.jpg'
