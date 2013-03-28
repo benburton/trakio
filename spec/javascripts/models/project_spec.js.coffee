@@ -1,9 +1,10 @@
 describe 'Trakio.Project', ->
 
-  userEmail = 'ben@burton.com'
-  inviteeEmail = 'ben@gmail.com'
-
   describe '#emails', ->
+
+    userEmail = 'ben@burton.com'
+    inviteeEmail = 'ben@gmail.com'
+
     it 'should contain project membership emails and user emails', ->
       project = Trakio.Project.createRecord()
       project.get('project_memberships').pushObject(Trakio.ProjectMembership.createRecord({ email: inviteeEmail }))

@@ -24,3 +24,5 @@ Trakio.User.FIXTURES = [{
   'name': 'Ben Burton',
   'email': 'ben@burton.com'
 }];
+
+Trakio.Comment.FIXTURES = [{}];
