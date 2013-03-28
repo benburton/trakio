@@ -21,7 +21,7 @@ DS.RESTAdapter.configure('Trakio.Comment', {
 Trakio.Adapter.configure("plurals", { story: 'stories' });
 
 Trakio.Store = DS.Store.extend({
-  revision: 11,
+  revision: 12,
   adapter: Trakio.Adapter.create()
 });
 

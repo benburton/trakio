@@ -6,4 +6,3 @@ describe 'Trakio.Project', ->
         id: 3,
         email: 'test@aol.com'
       })
-      console.log(project.get('project_memberships').toArray())
