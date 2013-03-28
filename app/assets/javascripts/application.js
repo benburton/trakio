@@ -7,6 +7,7 @@
 //= require moment
 //= require CLDR
 //= require ember-i18n
+//= require ember-validations
 //= require i18n
 //= require jquery.md5
 //= require_self

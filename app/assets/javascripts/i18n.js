@@ -60,5 +60,6 @@ Em.I18n.translations = {
   'settings.form.name_label': 'Name',
   'settings.form.email_label': 'Email',
   'settings.form.submit': 'Update Settings',
-  'settings.updated_message': 'Your settings have been updated.'
+  'settings.updated_message': 'Your settings have been updated.',
+  'settings.errors.blank_email': 'You must enter an email address.'
 };

@@ -31,12 +31,25 @@ describe UsersController do
 
     it { should be_success }
 
-    it 'update user attributes' do
+    it 'updates user attributes' do
       subject
       user.reload
       user_attributes.each do |field, value|
         user.send(field).should == value
       end
+    end
+
+    context 'using the me value' do
+      let(:user_id) { 'me' }
+      it { should be_success }
+      it 'updates user attributes' do
+        subject
+        user.reload
+        user_attributes.each do |field, value|
+          user.send(field).should == value
+        end
+      end
+
     end
 
     context 'not the current user' do

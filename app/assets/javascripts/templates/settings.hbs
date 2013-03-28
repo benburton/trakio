@@ -15,7 +15,7 @@
         {{ view Ember.TextField valueBinding='email' name='email' viewName='emailField' type='email' }}
       </li>
     </ul>
-    <input class="button confirm" type="submit" {{ action 'updateUser' user }} {{ translateAttr value="settings.form.submit" }} />
+    <input class="button confirm" type="submit" {{ action 'updateUser' }} {{ translateAttr value="settings.form.submit" }} />
   </form>
 
 </div>
