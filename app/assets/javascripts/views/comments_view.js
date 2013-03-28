@@ -5,7 +5,7 @@ Trakio.CommentsView = Ember.View.extend({
 
     this.get('controller').addComment({
       story: story,
-      user: Trakio.currentUser,
+      user: Trakio.User.find('me'),
       body: this.get('commentField').get('value')
     });
     event.stopPropagation();

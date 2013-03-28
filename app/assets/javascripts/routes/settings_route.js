@@ -1,6 +1,6 @@
 Trakio.SettingsRoute = Ember.Route.extend({
   model: function() {
-    return Trakio.currentUser;
+    return Trakio.User.find('me');
   },
   setupController: function(controller, model) {
     controller.set('user', model);
