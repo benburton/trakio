@@ -16,8 +16,19 @@ Trakio.ProjectController = Ember.ObjectController.extend({
   },
 
   addComment: function(commentParams) {
+    var self = this;
     var comment = Trakio.Comment.createRecord(commentParams);
-    this.store.commit();
+    comment.validate().then(function() {
+      if (comment.get('isValid')) {
+        self.store.commit();
+      }
+      else {
+        comment.deleteRecord();
+        if (comment.get('errors.body')) {
+          Trakio.flash('stories.comments.errors.blank_comment');
+        }
+      }
+    });
   },
 
   addUser: function(email) {

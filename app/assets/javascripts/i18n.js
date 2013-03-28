@@ -42,6 +42,7 @@ Em.I18n.translations = {
   // Comments
   'stories.comments.header': 'Comments',
   'stories.comments.add_button': 'Comment',
+  'stories.comments.errors.blank_comment': 'You must enter a body for the comment.',
 
   // Projects
   // - Index
