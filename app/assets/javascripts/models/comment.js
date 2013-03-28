@@ -11,5 +11,6 @@ Trakio.Comment = DS.Model.extend(Ember.Validations.Mixin, {
   },
 
   createdAtString: function() {
+    return this.get('createdAt') ? moment(this.get('createdAt')).format('DD MMMM, YYYY h:mma') : '';
   }.property('createdAt')
 });
